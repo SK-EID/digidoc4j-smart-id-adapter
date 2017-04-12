@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ee.sk.smartid</groupId>
+    <artifactId>digidoc4j-smart-id-adapter</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+
+    <name>DigiDoc4J Smart-ID adapter</name>
+    <description>DigiDoc4J Smart-ID adapter is a feature for the DigiDoc4j library to easily sign documents and create digital signature containers of signed documents with the Smart-ID solution</description>
+    <url>https://github.com/SK-EID/digidoc4j-smart-id-adapter</url>
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License, Version 3.0</name>
+            <url>https://www.gnu.org/licenses/lgpl-3.0.html</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Andres Voll</name>
+            <organization>Nortal</organization>
+            <organizationUrl>http://www.nortal.com</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git@github.com:SK-EID/digidoc4j-smart-id-adapter.git</connection>
+        <developerConnection>scm:git:git@github.com:SK-EID/digidoc4j-smart-id-adapter.git</developerConnection>
+        <url>https://github.com/SK-EID/digidoc4j-smart-id-adapter.git</url>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.digidoc4j</groupId>
+            <artifactId>digidoc4j</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>ee.sk.smartid</groupId>
+            <artifactId>smart-id-java-client</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
