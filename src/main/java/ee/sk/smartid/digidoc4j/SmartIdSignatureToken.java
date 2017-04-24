@@ -49,7 +49,7 @@ import java.util.Arrays;
  *   byte[] digestToSign = dataToSign.getDigestToSign();
  *
  *   // Calculate the verification code to display
- *   VerificationCodeCalculator.calculate(digestToSign);
+ *   String verificationCode = VerificationCodeCalculator.calculate(digestToSign);
  *
  *   // Sign the digest
  *   byte[] signatureValue = smartIdSignatureToken.signDigest(DigestAlgorithm.SHA256, digestToSign);
@@ -193,15 +193,7 @@ public class SmartIdSignatureToken implements SignatureToken {
         .withDocumentNumber(documentNumber)
         .withSignableData(signableData);
 
-    if (!StringUtils.isEmpty(certificateLevel)) {
-      builder.withCertificateLevel(certificateLevel);
-    }
-    if (!StringUtils.isEmpty(displayText)) {
-      builder.withDisplayText(displayText);
-    }
-    if (!StringUtils.isEmpty(nonce)) {
-      builder.withNonce(nonce);
-    }
+    addSignatureRequestParams(builder);
 
     SmartIdSignature signature = builder.sign();
     return signature.getValue();
@@ -235,15 +227,7 @@ public class SmartIdSignatureToken implements SignatureToken {
         .withDocumentNumber(documentNumber)
         .withSignableHash(signableHash);
 
-    if (!StringUtils.isEmpty(certificateLevel)) {
-      builder.withCertificateLevel(certificateLevel);
-    }
-    if (!StringUtils.isEmpty(displayText)) {
-      builder.withDisplayText(displayText);
-    }
-    if (!StringUtils.isEmpty(nonce)) {
-      builder.withNonce(nonce);
-    }
+    addSignatureRequestParams(builder);
 
     SmartIdSignature signature = builder.sign();
     return signature.getValue();
@@ -256,5 +240,17 @@ public class SmartIdSignatureToken implements SignatureToken {
       }
     }
     throw new DigestAlgorithmNotSupportedException(digestAlgorithm.name() + " digest algorithm is not supported by Smart-ID. Supported algorigthms: " + Arrays.asList(HashType.values()));
+  }
+
+  private void addSignatureRequestParams(SignatureRequestBuilder builder) {
+    if (!StringUtils.isEmpty(certificateLevel)) {
+      builder.withCertificateLevel(certificateLevel);
+    }
+    if (!StringUtils.isEmpty(displayText)) {
+      builder.withDisplayText(displayText);
+    }
+    if (!StringUtils.isEmpty(nonce)) {
+      builder.withNonce(nonce);
+    }
   }
 }
