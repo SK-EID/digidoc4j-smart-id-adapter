@@ -5,7 +5,7 @@
 
 ## Introduction
 
-DigiDoc4J Smart-ID adapter is a feature for the [DigiDoc4j](http://open-eid.github.io/digidoc4j/) library to easily sign documents and create digital signature containers of signed documents with the Smart-ID solution.
+DigiDoc4J Smart-ID adapter is a feature for the [DigiDoc4j](https://github.com/open-eid/digidoc4j) library to easily sign documents and create digital signature containers of signed documents with the [Smart-ID](https://www.smart-id.com) solution.
 
 ## Requirements
 
