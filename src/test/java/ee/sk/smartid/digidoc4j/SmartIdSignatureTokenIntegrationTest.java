@@ -23,7 +23,7 @@ public class SmartIdSignatureTokenIntegrationTest {
   private static final String RELYING_PARTY_UUID = "00000000-0000-0000-0000-000000000000";
   private static final String RELYING_PARTY_NAME = "DEMO";
   private static final String DOCUMENT_NUMBER = "PNOEE-31111111111-K0DD-NQ";
-  private static final NationalIdentity NATIONAL_IDENTITY = new NationalIdentity("EE", "39004170346");
+  private static final NationalIdentity NATIONAL_IDENTITY = new NationalIdentity("EE", "31111111111");
   private SmartIdClient client;
 
   @Before

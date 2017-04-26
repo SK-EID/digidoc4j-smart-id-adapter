@@ -1,7 +1,7 @@
 #!/bin/bash
 
 project="digidoc4j-smart-id-adapter"
-version="1.0-SNAPSHOT"
+version="1.0"
 staging_url="https://oss.sonatype.org/service/local/staging/deploy/maven2/"
 repositoryId="ossrh"
 
