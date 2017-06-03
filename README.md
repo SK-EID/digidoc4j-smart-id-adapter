@@ -11,6 +11,7 @@ DigiDoc4J Smart-ID adapter is a feature for the [DigiDoc4j](https://github.com/o
 
 * Java 1.7
 * Internet access to Smart-ID server environment
+* [DigiDoc4j](https://github.com/open-eid/digidoc4j#user-content-requirements) requirements (due to being used along with the Digidoc4J library)
 
 ## How to use it
 
